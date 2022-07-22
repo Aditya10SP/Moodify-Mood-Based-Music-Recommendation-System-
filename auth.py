@@ -15,11 +15,6 @@ os.environ['SPOTIPY_REDIRECT_URI']='http://127.0.0.1:8000/'
 def get_token():
     username = ''.join(random.choices(string.ascii_uppercase +
                                 string.digits, k = 10))
-    #  if len(sys.argv) > 1:
-    #     username = sys.argv[1]
-    #  else:
-    #     print("Usage: %s username" % (sys.argv[0],))
-    #     sys.exit()
 
     scope = ['user-library-read','user-read-recently-played','playlist-modify-private','playlist-modify-public','playlist-read-private','playlist-read-collaborative','user-read-private']
 
