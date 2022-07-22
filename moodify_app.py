@@ -179,51 +179,9 @@ def main():
                     st.empty()
                     auth.create_playlist(token, ids)
                     st.success("Playlist has been added to your Spotify account!")
-            
-
-
-    elif app_mode == SIDEBAR_OPTION_MEET_TEAM:
-        st.sidebar.write(" ------ ")
-        st.subheader("We are the Moodify team")
-        first_column, second_column, third_column, fourth_column, fifth_column = st.beta_columns(5)
-
-        first_column.write('''**Mentors**''')
-        first_column.write('Abhishek')
-        first_column.write('Divyanshi')
-        second_column.write('''**App dev**''')       
-        second_column.write('Aaditi')
-        second_column.write('Adish')
-        second_column.write('Bhavesh')
-        second_column.write('Kritheesh')
-        third_column.write('''**Image Classification**''')        
-        third_column.write('Karrthik')
-        third_column.write('Sai Teja')
-        third_column.write('Siddhant')
-        fourth_column.write('''**Music API**''')        
-        fourth_column.write('Dhawal')
-        fourth_column.write('Tanirika')
-        fifth_column.write('''**Music Classification**''')        
-        fifth_column.write('Hastyn')
-        fifth_column.write('Krutheeka')
-        fifth_column.write('Sarthak')
-
-
-        st.sidebar.write('Please feel free to connect with us!')
-        st.sidebar.success('Hope you had a great time :)')
-
-        expandar_linkedin = st.beta_expander('Contact Information')
-        expandar_linkedin.write('Aaditi: https://github.com/aaditist')
-        expandar_linkedin.write('Adish: https://github.com/adish13')
-        expandar_linkedin.write('Bhavesh: https://github.com/bhaveshkhichi')
-        expandar_linkedin.write('Dhawal: https://github.com/Dhawal-AI')
-        expandar_linkedin.write('Hastyn: https://github.com/Hastyn')
-        expandar_linkedin.write('Karrthik: https://github.com/Karrthik-Arya')
-        expandar_linkedin.write('Kritheesh: https://github.com/E-Kritheesh')
-        expandar_linkedin.write('Krutheeka: https://github.com/Krutheeka-RKJ')
-        expandar_linkedin.write('Sai Teja: https://github.com/tejavaranasi2')
-        expandar_linkedin.write('Sarthak: https://github.com/SarthakM320')
-        expandar_linkedin.write('Siddhant: https://github.com/siddhant-dutta')
-        expandar_linkedin.write('Tanirika: https://github.com/TanirikaRoy')
+      
+    
+   
     else:
         raise ValueError('Selected sidebar option is not implemented. Please open an issue on Github: LINK SOON')
 
