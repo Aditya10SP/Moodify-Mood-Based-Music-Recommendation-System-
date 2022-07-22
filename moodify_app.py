@@ -52,35 +52,10 @@ def load_and_preprocess_img(img_path, num_hg_blocks, bbox=None):
         img = ImageOps.exif_transpose(img)
     except: 
         pass
-    #exif=dict((ExifTags.TAGS[k], v) for k, v in img._getexif().items() if k in ExifTags.TAGS)
-    #if not exif['Orientation']:
-     #   img=img.rotate(90, expand=True)
-    #if bbox is None:
-        #w, h = img.size
-
-        #if w != h:
-            # if the image is not square
-            # Indexed so upper left corner is (0,0)
-            #bbox = data_generator.transform_bbox_square((0, 0, w, h))
-
-    #if bbox is not None:
-        # If a bounding box is provided, use it
-        #bbox = np.array(bbox, dtype=int)
-
-        # Crop with box of order left, upper, right, lower
-        #img = img.crop(box=bbox)
 
     new_img = cv2.resize(np.array(img), IMAGE_DISPLAY_SIZE,
                         interpolation=cv2.INTER_LINEAR)
 
-    # Add a 'batch' axis
-    #X_batch = np.expand_dims(new_img.astype('float'), axis=0)
-
-    # Add dummy heatmap "ground truth", duplicated 'num_hg_blocks' times
-    #y_batch = [np.zeros((1, *(OUTPUT_DIM), NUM_COCO_KEYPOINTS), dtype='float') for _ in range(num_hg_blocks)]
-
-    # Normalize input image
-    #X_batch/=255.0
     return new_img
 
 def run_app(img, token):
