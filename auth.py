@@ -45,12 +45,6 @@ def fetch_username(token):
 
 def fetch_ids(token):
     if token:
-        # print(token)
-        # sp = spotipy.Spotify(auth=token)
-        # sp.trace = False
-        # results = sp.current_user_playlists(limit=50)
-        # for i, item in enumerate(results['items']):
-        #     print("%d %s" %(i, item['name']))
         # #user history
         uri = 'https://api.spotify.com/v1/me/player/recently-played'
         req = requests.get(uri,headers={'Authorization': 'Bearer ' + str(token)},params={'limit':50})
